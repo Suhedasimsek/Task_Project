@@ -36,6 +36,10 @@ public class Hooks {
         String browserName = WebActions.getProperty("browser");
         driverFactory = new DriverFactory();
         page = driverFactory.initDriver(browserName);
+        
+        // Implicitly wait - her locator için 30 saniye bekle
+        page.setDefaultTimeout(30000);
+        page.setDefaultNavigationTimeout(60000);
     }
 
     /**

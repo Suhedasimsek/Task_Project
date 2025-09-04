@@ -58,7 +58,7 @@ public abstract class WebActions {
     }
 
     public static String getRowColValue(String filePath, String sheetName, int rowNum, int colNum) {
-        String fileName = System.getProperty("user.dir") + "\\src\\main\\java\\utils\\functional\\" + filePath + ".xlsx";
+        String fileName = System.getProperty("user.dir") + "\\src\\test\\java\\utils\\functional\\" + filePath + ".xlsx";
         Workbook workbook = null;
         try {
             workbook = WorkbookFactory.create(new File(fileName));

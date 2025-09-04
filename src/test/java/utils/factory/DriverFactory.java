@@ -34,6 +34,11 @@ public class DriverFactory {
         //Below line is used to start the trace file
         context.tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true).setSources(false));
         page = context.newPage();
+        
+        // Timeout ayarları - navigation ve action timeout'larını artır
+        page.setDefaultNavigationTimeout(60000); // 60 saniye
+        page.setDefaultTimeout(30000); // 30 saniye
+        
         threadLocalDriver.set(page);
         threadLocalContext.set(context);
         return page;
