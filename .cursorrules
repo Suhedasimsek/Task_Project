@@ -1,0 +1,53 @@
+description: 
+globs: 
+alwaysApply: true
+---
+# Bu bir Playwright, Java ve Cucumber ile oluşturulmuş, sağlam ve bakımı kolay bir BDD otomasyon projesidir.
+# Ana ilkeler: Kod sadeliği, benzersiz locator'lar ve akıllı bekleme mekanizmalarıdır.
+
+# --- GENEL KURALLAR ---
+ 1. OTOMATİK BEKLEME: Playwright'in yerleşik otomatik bekleme (auto-wait) mekanizmalarını kullan.
+ `locator.click()`, `locator.fill()`, `assertThat(locator).isVisible()` gibi metotlar zaten elementin hazır olmasını bekler.
+`Thread.sleep()` KESİNLİKLE KULLANMA. Sadece çok özel durumlarda (örn: bir animasyonun bitmesini beklemek) `page.waitForTimeout()` kullan.
+
+# 2. BENZERSİZ LOCATOR: Locator'lar için öncelik sırası şu şekilde olmalıdır:
+    - `page.getByTestId("...")` veya `[data-testid="..."]` (En İyisi)
+   - `page.getByRole(...)`
+   - `page.getById("#...")`
+   - Dinamik olmayan, stabil CSS sınıfları veya XPath (Son çare)
+
+# 3. KOD SADELİĞİ: Gereksiz koddan kaçın. Metotlar tek bir iş yapmalı ve isimleri bu işi yansıtmalıdır.
+Karmaşık zincirleme komutlar yerine yardımcı metotlar oluştur.
+Kodlar çok sade ve anlaşılır olsun
+Gerek olmadıkça try catch yapısı kullanma. Sadece gerekli olduğunda kullan
+
+# --- Dosya Kuralları ---
+
+# Feature Dosyaları: Anlaşılır, iş odaklı senaryolar.
+src/test/resources/features/**/*.feature ->
+Bir BDD test senaryosu. Teknik detaylardan arındırılmış, kullanıcı odaklı adımlar içerir.
+
+# Sayfa (Page) Nesnesi Sınıfları: Bir web sayfasının veya bileşeninin kapsüllenmesi.
+src/test/java/pages/*.java ->
+Bu bir Page Object sınıfıdır.
+- Sadece `private final Page page` ve `private final Locator` alanları içerir.
+- Constructor, `Page` nesnesini alır ve locator'ları başlatır.
+- Sayfa eylemleri (navigate, click, fill) için public metotlar içerir. Bu metotlar Playwright'in auto-wait özelliğinden faydalanır.
+- Doğrulama (verification) için public metotlar içerir. Bu metotlar `assertThat(locator)...` kullanarak sağlam iddialar ortaya koyar ve kendi içinde bekler.
+
+# Adım Tanımlama (Step Definition) Sınıfları: Gherkin ve Java arasındaki köprü.
+src/test/java/stepdefinitions/*.java ->
+Bu bir Cucumber Step Definition sınıfıdır.
+- GÖREVİ: Gherkin adımını ilgili Page Object metoduna delege etmektir.
+- İçinde `page.click()` gibi doğrudan Playwright API'si ÇAĞIRMAZ. Tüm etkileşimler Page sınıfı üzerinden yapılır.
+- Constructor'ı, `DriverFactory.getPage()` aracılığıyla mevcut `Page` nesnesini alıp ilgili Page Object'i başlatır.
+
+# Çekirdek (Core) Sınıflar: Framework altyapısı.
+src/test/java/utils/*.java ->
+Bu, framework'ün altyapı kodudur.
+- `DriverFactory`: Playwright yaşam döngüsünü `ThreadLocal` ile paralel çalışmaya uygun ve güvenli bir şekilde yönetir.
+- `Hooks`: `@Before` ve `@After` ile her senaryo için tarayıcıyı temiz bir şekilde başlatır ve kapatır.
+
+# Test Koşucu (Runner): Testlerin giriş noktası.
+src/test/java/testrunner/*.java ->
+Bu bir JUnit/Cucumber test koşucusudur. Sadece `@CucumberOptions` ile konfigürasyon içerir.
