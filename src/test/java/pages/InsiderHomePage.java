@@ -2,6 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 /**
  * Insider Ana Sayfa Page Object sınıfı
@@ -18,6 +19,11 @@ public class InsiderHomePage {
     private final Locator companyMenu;
     private final Locator careersLink;
     private final Locator acceptCookiesButton;
+    private final Locator idcMarketScapeElement;
+    // Careers page locators
+    private final Locator careersPageHeader;
+    private final Locator locationsBlock;
+    private final Locator lifeAtInsiderBlock;
     
     public InsiderHomePage(Page page) {
         this.page = page;
@@ -25,6 +31,11 @@ public class InsiderHomePage {
         this.companyMenu = page.locator("a.nav-link.dropdown-toggle:has-text('Company')");
         this.careersLink = page.locator("text='Careers'");
         this.acceptCookiesButton = page.locator("text='Accept All'").first();
+        this.idcMarketScapeElement = page.locator("span:has-text('Insider named a Leader in the IDC MarketScape Report')");
+        // Careers page locators
+        this.careersPageHeader = page.locator("h1:has-text('Ready to disrupt')");
+        this.locationsBlock = page.locator("h3:has-text('Our Locations')").first();
+        this.lifeAtInsiderBlock = page.locator("h2:has-text('Life at Insider')").first();
     }
     
     /**
@@ -52,7 +63,7 @@ public class InsiderHomePage {
      * Ana sayfanın başarıyla yüklendiğini doğrular
      */
     public void verifyHomePageIsOpened() {
-        // Şimdilik verify kaldırıldı - sadece navigation oldu mu kontrol et
+        assertThat(idcMarketScapeElement).isVisible();
     }
     
     /**
@@ -67,5 +78,30 @@ public class InsiderHomePage {
      */
     public void clickCareers() {
         careersLink.click();
+    }
+    
+    /**
+     * Careers sayfasının başarıyla yüklendiğini doğrular
+     */
+    public void verifyCareersPageIsOpened() {
+        assertThat(careersPageHeader).isVisible();
+    }
+
+    /**
+     * Locations bloğunun görünür olduğunu doğrular
+     */
+    public void verifyLocationsBlockIsVisible() {
+        // Sayfayı scroll yap
+        page.evaluate("window.scrollBy(0, 500)");
+        assertThat(locationsBlock).isVisible();
+    }
+
+    /**
+     * Life at Insider bloğunun görünür olduğunu doğrular
+     */
+    public void verifyLifeAtInsiderBlockIsVisible() {
+        // Life at Insider elementine doğrudan scroll yap
+        lifeAtInsiderBlock.scrollIntoViewIfNeeded();
+        assertThat(lifeAtInsiderBlock).isVisible();
     }
 }

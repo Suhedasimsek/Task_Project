@@ -13,6 +13,8 @@ public class QAJobsPage {
     private final Locator seeAllQAJobsButton;
     private final Locator locationDropdown;
     private final Locator departmentDropdown;
+    private final Locator locationDropdownOptions;
+    private final Locator departmentDropdownOptions;
     private final Locator viewRoleButtons;
     private final Locator firstJobPosition;
     private final Locator acceptCookiesButton;
@@ -22,6 +24,8 @@ public class QAJobsPage {
         this.seeAllQAJobsButton = page.locator("a.btn.btn-outline-secondary[href*='department=qualityassurance']");
         this.locationDropdown = page.locator("#select2-filter-by-location-container");
         this.departmentDropdown = page.locator("#select2-filter-by-department-container");
+        this.locationDropdownOptions = page.locator(".select2-results__option");
+        this.departmentDropdownOptions = page.locator(".select2-results__option");
         this.viewRoleButtons = page.locator("text=View Role");
         this.firstJobPosition = page.locator(".position-list-item").first();
         this.acceptCookiesButton = page.locator("text='Accept All'").first();
@@ -48,25 +52,21 @@ public class QAJobsPage {
     }
     
     public void filterByLocation(String location) {
-        // Select2 dropdown'ı force click ile aç
-        locationDropdown.click(new Locator.ClickOptions().setForce(true));
-        page.waitForTimeout(1000);
-        // Seçeneği seç
+        
+        locationDropdown.click();
         page.locator(".select2-results__option:has-text('" + location + "')").click();
-        page.waitForTimeout(2000); // Filtrelemenin görünmesi için bekle
+        page.waitForTimeout(2000); 
     }
     
     public void filterByDepartment(String department) {
-        // Select2 dropdown'ı force click ile aç
-        departmentDropdown.click(new Locator.ClickOptions().setForce(true));
-        page.waitForTimeout(1000);
-        // Seçeneği seç
+      
+        departmentDropdown.click(); 
         page.locator(".select2-results__option:has-text('" + department + "')").click();
-        page.waitForTimeout(2000); // Filtrelemenin görünmesi için bekle
+        page.waitForTimeout(2000); 
     }
     
     public void verifyAllJobsContainPositionText(String expectedText) {
-        // Sayfayı aşağı scroll yap ki iş listesi görünür olsun
+        
         page.evaluate("window.scrollBy(0, 500)");
         assertThat(viewRoleButtons.first()).isVisible();
     }

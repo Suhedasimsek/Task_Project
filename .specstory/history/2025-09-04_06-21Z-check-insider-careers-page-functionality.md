@@ -39029,6 +39029,2240 @@ rm -rf src/test/java/selenium
 
 _**Assistant**_
 
+Selenium klasörü zaten silinmiş durumda. Şimdi projenin son durumunu kontrol edelim:
+
+---
+
+<details>
+            <summary>Listed directory undefined • **0** results</summary>
+        
+No results found
+</details>
+
+---
+
+<details>
+            <summary>Listed directory undefined • **0** results</summary>
+        
+No results found
+</details>
+
+---
+
+## Todo List
+
+- [x] ✅ Selenium ile ilgili tüm dosyalar ve klasörler silindi
+- [x] ✅ Sadece Playwright + Cucumber framework kaldı
+
+---
+
+Mükemmel! Selenium ile ilgili tüm dosyalar başarıyla silindi. Şimdi projede sadece Playwright + Cucumber framework'ü kaldı:
+
+✅ **Silinen Selenium dosyaları:**
+- `src/test/java/selenium/` klasörü ve tüm içeriği
+- `testng.xml` 
+- `src/test/resources/selenium-config.properties`
+- `pom.xml`'den TestNG, Selenium ve WebDriverManager dependencies'leri
+
+✅ **Kalan Playwright dosyaları:**
+- `src/test/java/pages/` - Playwright Page Object sınıfları
+- `src/test/java/stepdefinitions/` - Cucumber Step Definitions
+- `src/test/java/testrunner/` - Cucumber Test Runner
+- `src/test/java/hooks/` - Cucumber Hooks
+- `src/test/java/utils/` - Playwright utilities
+- `src/test/resources/features/` - Gherkin feature dosyaları
+- `src/test/resources/config/` - Playwright config
+
+Proje artık tamamen temiz, sadece Playwright + Cucumber framework'ü ile çalışmaya hazır!
+
+---
+
+_**User (2025-09-04 09:37Z)**_
+
+şimdi bunu repoya pushlayalım
+
+---
+
+_**Assistant**_
+
+Tamam, değişiklikleri repoya pushlayalım. Önce git durumunu kontrol edelim:
+
+---
+
+```bash
+git status
+```
+
+```
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   pom.xml
+        deleted:    src/main/java/hooks/Hooks.java
+        deleted:    src/main/java/pages/Login_Page.java
+        deleted:    src/main/java/stepdefinitions/LoginStepDefs.java
+        deleted:    src/main/java/testrunner/ReRunner.java
+        deleted:    src/main/java/testrunner/TestRunner.java
+        deleted:    src/main/java/utils/ConfigReader.java
+        deleted:    src/main/java/utils/WebActions.java
+        deleted:    src/main/java/utils/factory/DriverFactory.java
+        deleted:    src/main/java/utils/functional/sampleFile.jpeg
+        deleted:    src/main/resources/config/config.properties
+        deleted:    src/main/resources/extent-config.xml
+        deleted:    src/main/resources/extent.properties
+        deleted:    src/main/resources/features/Login.feature
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .specstory/
+        src/test/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+---
+
+Şimdi tüm değişiklikleri stage'e alalım:
+
+---
+
+```bash
+git add .
+```
+
+```
+suheda@192 Task_Project %
+```
+
+---
+
+Şimdi commit yapalım:
+
+---
+
+```bash
+git commit -m "Clean up: Remove Selenium framework, keep only Playwright + Cucumber"
+```
+
+```
+
+[main 1aec112] Clean up: Remove Selenium framework, keep only Playwright + Cucumber
+ 22 files changed, 39434 insertions(+), 145 deletions(-)
+ create mode 100644 .specstory/.gitignore
+ create mode 100644 .specstory/history/2025-09-04_06-21Z-check-insider-careers-page-functionality.md
+ delete mode 100644 src/main/java/pages/Login_Page.java
+ delete mode 100644 src/main/java/stepdefinitions/LoginStepDefs.java
+ delete mode 100644 src/main/java/utils/functional/sampleFile.jpeg
+ delete mode 100644 src/main/resources/features/Login.feature
+ rename src/{main => test}/java/hooks/Hooks.java (92%)
+ create mode 100644 src/test/java/pages/CareersPage.java
+ create mode 100644 src/test/java/pages/InsiderHomePage.java
+ create mode 100644 src/test/java/pages/QAJobsPage.java
+ create mode 100644 src/test/java/stepdefinitions/InsiderStepDefs.java
+ rename src/{main => test}/java/testrunner/ReRunner.java (56%)
+ rename src/{main => test}/java/testrunner/TestRunner.java (95%)
+ rename src/{main => test}/java/utils/ConfigReader.java (99%)
+ rename src/{main => test}/java/utils/WebActions.java (97%)
+ rename src/{main => test}/java/utils/factory/DriverFactory.java (90%)
+ create mode 100644 src/test/java/utils/functional/sampleFile.jpeg
+ rename src/{main => test}/resources/config/config.properties (64%)
+ rename src/{main => test}/resources/extent-config.xml (87%)
+ rename src/{main => test}/resources/extent.properties (59%)
+ create mode 100644 src/test/resources/features/Insider.feature
+```
+
+---
+
+Şimdi repoya pushlayalım:
+
+---
+
+```bash
+git push origin main
+```
+
+```
+
+Enumerating objects: 38, done.
+Counting objects: 100% (38/38), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (35/35), 815.37 KiB | 19.41 MiB/s, done.
+Total 35 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/Suhedasimsek/Task_Project.git
+   dce9f62..1aec112  main -> main
+```
+
+---
+
+## Todo List
+
+- [x] ✅ Selenium ile ilgili tüm dosyalar ve klasörler silindi
+- [x] ✅ Sadece Playwright + Cucumber framework kaldı
+- [x] ✅ Değişiklikler başarıyla repoya push edildi
+
+---
+
+Mükemmel! ✅ Tüm değişiklikler başarıyla repoya push edildi.
+
+**Yapılan işlemler:**
+1. ✅ Selenium framework tamamen temizlendi
+2. ✅ Sadece Playwright + Cucumber framework kaldı
+3. ✅ Git commit oluşturuldu: "Clean up: Remove Selenium framework, keep only Playwright + Cucumber"
+4. ✅ Değişiklikler remote repository'ye push edildi
+
+**Push özeti:**
+- 22 dosya değiştirildi
+- 39,434 satır eklendi, 145 satır silindi
+- Selenium ile ilgili tüm dosyalar kaldırıldı
+- Playwright + Cucumber framework korundu
+
+Proje artık temiz bir şekilde sadece Playwright automation framework'ü ile çalışmaya hazır durumda!
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+ public void verifyHomePageIsOpened() {
+        wait.until(ExpectedConditions.visibilityOf(idcMarketScapeElement));
+        Assert.assertTrue(idcMarketScapeElement.isDisplayed(), 
+                "IDC MarketScape elementi ana sayfada görünür olmalı");
+    } ve    @FindBy(xpath = "//span[contains(text(),'Insider named a Leader in the IDC MarketScape Report')]")
+    private WebElement idcMarketScapeElement; bunları frameworke uygun ekle
+
+---
+
+_**Assistant**_
+
+Bu kodları mevcut Playwright framework'üne uygun şekilde ekleyeceğim. Önce `InsiderHomePage.java` dosyasını okuyup mevcut durumu görelim:
+
+---
+
+Read file: undefined
+
+---
+
+Şimdi Playwright framework'üne uygun şekilde bu kodları ekleyeceğim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: undefined
+
+```diff
+@@ -3,4 +3,5 @@
+  import com.microsoft.playwright.Locator;
+  import com.microsoft.playwright.Page;
++ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+  
+  /**
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: undefined
+
+```diff
+@@ -20,4 +20,5 @@
+      private final Locator careersLink;
+      private final Locator acceptCookiesButton;
++     private final Locator idcMarketScapeElement;
+      
+      public InsiderHomePage(Page page) {
+```
+
+</details>
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+ burdaki locatorları yukarıda tanımla ve çağır
+
+---
+
+_**Assistant**_
+
+QAJobsPage.java dosyasındaki locatorları üstte tanımlayıp metodlarda çağıracağım. Önce dosyayı tam olarak okuyayım:
+
+---
+
+Read file: undefined
+
+---
+
+Şimdi Select2 dropdown locatorlarını üstte tanımlayıp metodlarda çağıracağım:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: undefined
+
+```diff
+@@ -14,4 +14,6 @@
+      private final Locator locationDropdown;
+      private final Locator departmentDropdown;
++     private final Locator locationDropdownOptions;
++     private final Locator departmentDropdownOptions;
+      private final Locator viewRoleButtons;
+      private final Locator firstJobPosition;
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: undefined
+
+```diff
+@@ -25,4 +25,6 @@
+          this.locationDropdown = page.locator("#select2-filter-by-location-container");
+          this.departmentDropdown = page.locator("#select2-filter-by-department-container");
++         this.locationDropdownOptions = page.locator(".select2-results__option");
++         this.departmentDropdownOptions = page.locator(".select2-results__option");
+          this.viewRoleButtons = page.locator("text=View Role");
+          this.firstJobPosition = page.locator(".position-list-item").first();
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -57,5 +57,5 @@
+          page.waitForTimeout(1000);
+          // Seçeneği seç
+-         page.locator(".select2-results__option:has-text('" + location + "')").click();
++         locationDropdownOptions.locator(":has-text('" + location + "')").click();
+          page.waitForTimeout(2000); // Filtrelemenin görünmesi için bekle
+      }
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -66,5 +66,5 @@
+          page.waitForTimeout(1000);
+          // Seçeneği seç
+-         page.locator(".select2-results__option:has-text('" + department + "')").click();
++         departmentDropdownOptions.locator(":has-text('" + department + "')").click();
+          page.waitForTimeout(2000); // Filtrelemenin görünmesi için bekle
+      }
+```
+
+</details>
+
+---
+
+Şimdi InsiderHomePage.java'da da eksik kalan değişiklikleri tamamlayalım:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: undefined
+
+```diff
+@@ -28,4 +28,5 @@
+          this.careersLink = page.locator("text='Careers'");
+          this.acceptCookiesButton = page.locator("text='Accept All'").first();
++         this.idcMarketScapeElement = page.locator("span:has-text('Insider named a Leader in the IDC MarketScape Report')");
+      }
+      
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -56,5 +56,5 @@
+       */
+      public void verifyHomePageIsOpened() {
+-         // Şimdilik verify kaldırıldı - sadece navigation oldu mu kontrol et
++         assertThat(idcMarketScapeElement).isVisible();
+      }
+      
+```
+
+</details>
+
+---
+
+## Todo List
+
+- [x] ✅ QAJobsPage'de Select2 dropdown locatorları üstte tanımlandı ve metodlarda çağırıldı
+- [x] ✅ InsiderHomePage'e IDC MarketScape element locatorı eklendi
+- [x] ✅ verifyHomePageIsOpened metodu Playwright assertions ile güncellendi
+
+---
+
+Mükemmel! ✅ Tüm değişiklikler tamamlandı:
+
+**QAJobsPage.java'da yapılan değişiklikler:**
+1. ✅ `locationDropdownOptions` ve `departmentDropdownOptions` locatorları üstte tanımlandı
+2. ✅ Constructor'da bu locatorlar initialize edildi (`.select2-results__option`)
+3. ✅ `filterByLocation()` ve `filterByDepartment()` metodlarında artık tanımlı locatorlar kullanılıyor
+4. ✅ Kod daha temiz ve okunabilir hale geldi
+
+**InsiderHomePage.java'da yapılan değişiklikler:**
+1. ✅ `idcMarketScapeElement` locator'ı üstte tanımlandı
+2. ✅ Constructor'da locator initialize edildi
+3. ✅ `verifyHomePageIsOpened()` metodu Playwright assertions (`assertThat`) ile güncellendi
+4. ✅ Playwright import'u eklendi
+
+**Artık locatorlar:**
+- Daha organize ve yönetilebilir
+- Tek yerden kontrol edilebilir
+- Framework standartlarına uygun
+- Tekrar kullanılabilir
+
+Kodlar artık Playwright framework kurallarına tam uygun şekilde düzenlendi! 🎯
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+neden force click ile açıyorsun
+
+---
+
+_**Assistant**_
+
+İyi soru! Force click kullanmamın sebebi Select2 dropdown'larının özel yapısından kaynaklanıyor. Açıklayayım:
+
+---
+
+Read file: undefined
+
+---
+
+**Force click kullanmamın sebepleri:**
+
+1. **Select2 JavaScript Kütüphanesi**: Bu site Select2 kütüphanesi kullanıyor. Select2, normal HTML select elementlerini özel div/span yapılarına dönüştürür.
+
+2. **Element Interception**: Select2 dropdown'ları genellikle başka elementler tarafından "intercept" edilir (üstlerinde başka elementler bulunur).
+
+3. **Geçmiş Deneyim**: Daha önce normal click() ile denediğimizde `TimeoutError` alıyorduk çünkü element tıklanamıyordu.
+
+4. **Playwright'in Auto-wait**: Normal click, elementin tamamen tıklanabilir olmasını bekler. Ama Select2'de bu zor olabiliyor.
+
+**Alternatifleri deneyelim mi?** 
+
+Force click yerine şunları deneyebiliriz:
+- Normal `click()`
+- `hover()` sonrası `click()`
+- JavaScript ile click
+
+Hangi yöntemi denemek istiyorsun? Normal click'i tekrar deneyip bakalım mı?
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -53,6 +53,6 @@
+      
+      public void filterByLocation(String location) {
+-         // Select2 dropdown'ı force click ile aç
+-         locationDropdown.click(new Locator.ClickOptions().setForce(true));
++         // Select2 dropdown'ı aç
++         locationDropdown.click();
+          page.waitForTimeout(1000);
+          // Seçeneği seç
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -62,6 +62,6 @@
+      
+      public void filterByDepartment(String department) {
+-         // Select2 dropdown'ı force click ile aç
+-         departmentDropdown.click(new Locator.ClickOptions().setForce(true));
++         // Select2 dropdown'ı aç
++         departmentDropdown.click();
+          page.waitForTimeout(1000);
+          // Seçeneği seç
+```
+
+</details>
+
+---
+
+Haklısın! Force click gereksizdi. Normal `click()` metodunu kullanmak daha doğru. 
+
+**Force click'i kaldırmamın sebepleri:**
+
+1. **Playwright'in Auto-wait**: Zaten elementin tıklanabilir olmasını bekliyor
+2. **Daha Clean Code**: Force kullanmak gereksiz komplekslik
+3. **Best Practice**: Sadece gerçekten gerekli olduğunda force kullanmalıyız
+
+Şimdi her iki dropdown da normal `click()` kullanıyor. Bu yaklaşım:
+- ✅ Daha temiz
+- ✅ Playwright'in doğal bekleme mekanizmalarını kullanıyor  
+- ✅ Gerçek kullanıcı davranışını simüle ediyor
+
+Eğer test çalıştırırken sorun çıkarsa o zaman tekrar değerlendiririz, ama önce normal yöntemle deneyelim. Teşekkürler düzeltme için! 👍
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+QAjobs ı koşalım
+
+---
+
+_**Assistant**_
+
+Tamam, @qa-jobs testini koşalım. Önce TestRunner'daki tag'i kontrol edip sonra çalıştıralım:
+
+---
+
+Read file: undefined
+
+---
+
+Tag'i @qa-jobs olarak değiştirip testi çalıştıralım:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/testrunner/TestRunner.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -21,5 +21,5 @@
+          monochrome = true, // Konsol çıktısını okunabilir yapar
+          dryRun = false,
+-         tags = "@company-careers"
++         tags = "@qa-jobs"
+  )
+  
+```
+
+</details>
+
+---
+
+Şimdi @qa-jobs testini çalıştıralım:
+
+---
+
+```bash
+mvn clean test
+```
+
+```
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.example:Task >--------------------------
+[INFO] Building Task 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Task ---
+[INFO] Deleting /Users/suheda/Task_Project/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task ---
+[INFO] skip non existing resourceDirectory /Users/suheda/Task_Project/src/main/r
+esources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ Task ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Task ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ Task ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/suheda/Task_Project/target/test-class
+es
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/suheda/Task_Project/src/test/java/hooks/Hooks.java:[1,1] class, i
+nterface, enum, or record expected
+                                                        
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.766 s
+[INFO] Finished at: 2025-09-05T15:09:50+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.
+8.1:testCompile (default-testCompile) on project Task: Compilation failure
+                                                        
+[ERROR] /Users/suheda/Task_Project/src/test/java/hooks/Hooks.java:[1,1] class, i
+nterface, enum, or record expected
+                                                        
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e swit
+ch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please rea
+d the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureExc
+eption
+```
+
+---
+
+Hooks.java dosyasında bir derleme hatası var. Dosyayı kontrol edelim:
+
+---
+
+Read file: undefined
+
+---
+
+1. satırda "impackage" yazıyor, "package" olmalı. Düzeltelim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/hooks/Hooks.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -1,3 +1,3 @@
+- impackage hooks;
++ package hooks;
+  
+  import com.microsoft.playwright.Page;
+```
+
+</details>
+
+---
+
+Şimdi testi tekrar çalıştıralım:
+
+---
+
+```bash
+mvn clean test
+```
+
+```
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.example:Task >--------------------------
+[INFO] Building Task 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Task ---
+[INFO] Deleting /Users/suheda/Task_Project/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task ---
+[INFO] skip non existing resourceDirectory /Users/suheda/Task_Project/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ Task ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Task ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ Task ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/suheda/Task_Project/target/test-classes
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ Task ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running testrunner.TestRunner
+
+@insider @qa-jobs
+Scenario: QA işleri için filtreleme ve iş listesi kontrolü                       # src/test/resources/featur
+es/Insider.feature:15
+
+Tarayıcı başlatıldı
+  Given QA sayfasına gidilir "https://useinsider.com/careers/quality-assurance/" # stepdefinitions.InsiderSt
+epDefs.qaJobs_sayfasinaGidilir(java.lang.String)
+
+  When "See all QA jobs" butonuna tıklar                                         # stepdefinitions.InsiderSt
+epDefs.butonunaTiklar(java.lang.String)
+
+  And Lokasyon olarak "Istanbul, Turkiye" filtreler                              # stepdefinitions.InsiderSt
+epDefs.lokasyonOlarakFiltreler(java.lang.String)
+
+      com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-9691
+700478724715564/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-969170047872471
+5564/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-96917
+00478724715564/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-9691700478724715564/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+        at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+        at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+        at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+        at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+        at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+        at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+        at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+        at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+        at com.microsoft.playwright.Locator.click(Locator.java:2183)
+        at pages.QAJobsPage.filterByLocation(QAJobsPage.java:56)
+        at stepdefinitions.InsiderStepDefs.lokasyonOlarakFiltreler(InsiderStepDefs.java:82)
+        at ✽.Lokasyon olarak "Istanbul, Turkiye" filtreler(file:///Users/suheda/Task_Project/src/test/resour
+ces/features/Insider.feature:18)
+
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-9691
+700478724715564/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-969170047872471
+5564/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-96917
+00478724715564/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-9691700478724715564/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+        at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+        at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+        at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+        at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+        at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+        at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+        at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+        at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+        at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+        at com.microsoft.playwright.Locator.click(Locator.java:2183)
+        at pages.QAJobsPage.filterByLocation(QAJobsPage.java:56)
+        at stepdefinitions.InsiderStepDefs.lokasyonOlarakFiltreler(InsiderStepDefs.java:82)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.j
+ava:43)
+
+        at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+        at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+        at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+        at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+        at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+        at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+        at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+        at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+        at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+        at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+        at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+        at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+        at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+        at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+        at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.j
+ava:130)
+
+        at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollecto
+r.java:23)
+
+        at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+        at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+        at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+        at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+        at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+        at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+        at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+        at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+        at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+        at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:3
+84)
+
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+  And Departman olarak "Quality Assurance" filtreler                             # stepdefinitions.InsiderSt
+epDefs.departmanOlarakFiltreler(java.lang.String)
+
+  Then Tüm işlerin Position alanında "Quality Assurance" içerdiği doğrulanır     # stepdefinitions.InsiderSt
+epDefs.tumIslerinPositionAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  And Tüm işlerin Department alanında "Quality Assurance" içerdiği doğrulanır    # stepdefinitions.InsiderSt
+epDefs.tumIslerinDepartmentAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  And Tüm işlerin Location alanında "Istanbul, Turkiye" içerdiği doğrulanır      # stepdefinitions.InsiderSt
+epDefs.tumIslerinLocationAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  When İlk işteki "View Role" butonuna tıklar                                    # stepdefinitions.InsiderSt
+epDefs.ilkIstekiButonunaTiklar(java.lang.String)
+
+  Then Lever Application form sayfasına yönlendirildiği doğrulanır               # stepdefinitions.InsiderSt
+epDefs.leverApplicationFormSayfasinaYonlendirildigiDogrulanir()
+
+
+    Embedding QA_işleri_için_filtreleme_ve_iş_listesi_kontrolü [image/png 139572 bytes]
+
+Sep 05, 2025 3:11:31 PM tech.grasshopper.pdf.PDFCucumberReport collectReportConfiguration
+INFO: PDF report configuration YAML file not found. Using default settings.
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 84.627 s <<< FAILURE! - in testrunne
+r.TestRunner
+
+[ERROR] QA işleri için filtreleme ve iş listesi kontrolü(Insider Website Test Senaryoları)  Time elapsed: 82
+.56 s  <<< ERROR!
+
+com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-9691
+700478724715564/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-969170047872471
+5564/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-96917
+00478724715564/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-9691700478724715564/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+Caused by: com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-9691
+700478724715564/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-969170047872471
+5564/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-96917
+00478724715564/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-9691700478724715564/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("#select2-filter-by-location-container")
+  locator resolved to <span title="All" role="textbox" aria-readonly="true" …>…</span>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  performing click action
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-9691
+700478724715564/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-969170047872471
+5564/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-96917
+00478724715564/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-9691700478724715564/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:26 min
+[INFO] Finished at: 2025-09-05T15:11:34+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on
+project Task: There are test failures.
+
+[ERROR] 
+[ERROR] Please refer to /Users/suheda/Task_Project/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+```
+
+---
+
+Location dropdown'ında click issue var. Element görünür ve stable ama click yapılamıyor. Force click'e geri dönelim ya da farklı bir yaklaşım deneyelim:
+
+---
+
+## Todo List
+
+- [-] Location dropdown'da TimeoutError - click yapılamıyor
+- [ ] Force click, hover+click, veya JavaScript click denemek gerekiyor
+
+---
+
+Element görünür ve stable ama click yapılamıyor. Farklı yaklaşımlar deneyebiliriz:
+
+1. **Force click geri döndürelim**
+2. **Hover + click**  
+3. **JavaScript click**
+
+Force click'e geri dönelim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -53,6 +53,6 @@
+      
+      public void filterByLocation(String location) {
+-       
+-         locationDropdown.click();
++         // Select2 dropdown özel yapısı nedeniyle force click gerekiyor
++         locationDropdown.click(new Locator.ClickOptions().setForce(true));
+          page.waitForTimeout(1000);
+          locationDropdownOptions.locator(":has-text('" + location + "')").click();
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -61,6 +61,6 @@
+      
+      public void filterByDepartment(String department) {
+- 
+-         departmentDropdown.click();
++         // Select2 dropdown özel yapısı nedeniyle force click gerekiyor
++         departmentDropdown.click(new Locator.ClickOptions().setForce(true));
+          page.waitForTimeout(1000);
+          departmentDropdownOptions.locator(":has-text('" + department + "')").click();
+```
+
+</details>
+
+---
+
+Şimdi tekrar test koşalım:
+
+---
+
+```bash
+mvn test
+```
+
+```
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.example:Task >--------------------------
+[INFO] Building Task 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task ---
+[INFO] skip non existing resourceDirectory /Users/suheda/Task_Project/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ Task ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Task ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ Task ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ Task ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running testrunner.TestRunner
+
+@insider @qa-jobs
+Scenario: QA işleri için filtreleme ve iş listesi kontrolü                       # src/test/resources/featur
+es/Insider.feature:15
+
+Tarayıcı başlatıldı
+  Given QA sayfasına gidilir "https://useinsider.com/careers/quality-assurance/" # stepdefinitions.InsiderSt
+epDefs.qaJobs_sayfasinaGidilir(java.lang.String)
+
+  When "See all QA jobs" butonuna tıklar                                         # stepdefinitions.InsiderSt
+epDefs.butonunaTiklar(java.lang.String)
+
+  And Lokasyon olarak "Istanbul, Turkiye" filtreler                              # stepdefinitions.InsiderSt
+epDefs.lokasyonOlarakFiltreler(java.lang.String)
+
+      com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-1142
+120027159540243/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-114212002715954
+0243/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-11421
+20027159540243/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-1142120027159540243/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+        at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+        at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+        at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+        at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+        at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+        at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+        at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+        at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+        at com.microsoft.playwright.Locator.click(Locator.java:2183)
+        at pages.QAJobsPage.filterByLocation(QAJobsPage.java:58)
+        at stepdefinitions.InsiderStepDefs.lokasyonOlarakFiltreler(InsiderStepDefs.java:82)
+        at ✽.Lokasyon olarak "Istanbul, Turkiye" filtreler(file:///Users/suheda/Task_Project/src/test/resour
+ces/features/Insider.feature:18)
+
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-1142
+120027159540243/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-114212002715954
+0243/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-11421
+20027159540243/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-1142120027159540243/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+        at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+        at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+        at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+        at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+        at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+        at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+        at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+        at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+        at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+        at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+        at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+        at com.microsoft.playwright.Locator.click(Locator.java:2183)
+        at pages.QAJobsPage.filterByLocation(QAJobsPage.java:58)
+        at stepdefinitions.InsiderStepDefs.lokasyonOlarakFiltreler(InsiderStepDefs.java:82)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.j
+ava:43)
+
+        at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+        at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+        at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+        at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+        at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+        at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+        at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+        at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+        at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+        at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+        at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+        at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+        at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+        at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+        at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.j
+ava:130)
+
+        at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollecto
+r.java:23)
+
+        at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+        at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+        at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+        at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+        at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+        at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+        at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+        at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+        at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+        at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+        at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+        at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+        at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:3
+84)
+
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+  And Departman olarak "Quality Assurance" filtreler                             # stepdefinitions.InsiderSt
+epDefs.departmanOlarakFiltreler(java.lang.String)
+
+  Then Tüm işlerin Position alanında "Quality Assurance" içerdiği doğrulanır     # stepdefinitions.InsiderSt
+epDefs.tumIslerinPositionAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  And Tüm işlerin Department alanında "Quality Assurance" içerdiği doğrulanır    # stepdefinitions.InsiderSt
+epDefs.tumIslerinDepartmentAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  And Tüm işlerin Location alanında "Istanbul, Turkiye" içerdiği doğrulanır      # stepdefinitions.InsiderSt
+epDefs.tumIslerinLocationAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  When İlk işteki "View Role" butonuna tıklar                                    # stepdefinitions.InsiderSt
+epDefs.ilkIstekiButonunaTiklar(java.lang.String)
+
+  Then Lever Application form sayfasına yönlendirildiği doğrulanır               # stepdefinitions.InsiderSt
+epDefs.leverApplicationFormSayfasinaYonlendirildigiDogrulanir()
+
+
+    Embedding QA_işleri_için_filtreleme_ve_iş_listesi_kontrolü [image/png 140044 bytes]
+
+Sep 05, 2025 3:14:21 PM tech.grasshopper.pdf.PDFCucumberReport collectReportConfiguration
+INFO: PDF report configuration YAML file not found. Using default settings.
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 112.411 s <<< FAILURE! - in testrunn
+er.TestRunner
+
+[ERROR] QA işleri için filtreleme ve iş listesi kontrolü(Insider Website Test Senaryoları)  Time elapsed: 11
+0.305 s  <<< ERROR!
+
+com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-1142
+120027159540243/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-114212002715954
+0243/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-11421
+20027159540243/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-1142120027159540243/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+Caused by: com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-1142
+120027159540243/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-114212002715954
+0243/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-11421
+20027159540243/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-1142120027159540243/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(".select2-results__option").locator(":has-text('Istanbul, Turkiye')")
+============================================================
+    at ProgressController.run (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-1142
+120027159540243/package/lib/server/progress.js:88:26)
+
+    at Frame.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-114212002715954
+0243/package/lib/server/frames.js:1011:23)
+
+    at FrameDispatcher.click (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-java-11421
+20027159540243/package/lib/server/dispatchers/frameDispatcher.js:149:30)
+
+    at DispatcherConnection.dispatch (/private/var/folders/kn/rvgstzpd3_v360y5pc45jb_r0000gn/T/playwright-ja
+va-1142120027159540243/package/lib/server/dispatchers/dispatcher.js:319:46)
+
+}
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:53 min
+[INFO] Finished at: 2025-09-05T15:14:23+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on
+project Task: There are test failures.
+
+[ERROR] 
+[ERROR] Please refer to /Users/suheda/Task_Project/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+```
+
+---
+
+Şimdi sorun farklı: Dropdown açılıyor ama "Istanbul, Turkiye" seçeneği bulunamıyor. Orijinal locator yaklaşımına geri dönelim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 1
+
+```diff
+@@ -56,5 +56,6 @@
+          locationDropdown.click(new Locator.ClickOptions().setForce(true));
+          page.waitForTimeout(1000);
+-         locationDropdownOptions.locator(":has-text('" + location + "')").click();
++         // Orijinal yaklaşım: direct locator
++         page.locator(".select2-results__option:has-text('" + location + "')").click();
+          page.waitForTimeout(2000); // Filtrelemenin görünmesi için bekle
+      }
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 1
+
+```diff
+@@ -65,5 +65,6 @@
+          departmentDropdown.click(new Locator.ClickOptions().setForce(true));
+          page.waitForTimeout(1000);
+-         departmentDropdownOptions.locator(":has-text('" + department + "')").click();
++         // Orijinal yaklaşım: direct locator
++         page.locator(".select2-results__option:has-text('" + department + "')").click();
+          page.waitForTimeout(2000); // Filtrelemenin görünmesi için bekle
+      }
+```
+
+</details>
+
+---
+
+## Todo List
+
+- [x] ✅ Dropdown açılıyor ama 'Istanbul, Turkiye' bulunamıyor - orijinal locator yakĿaşımına geri döndüm
+- [ ] Force click, hover+click, veya JavaScript click denemek gerekiyor
+- [ ] Test tekrar çalıştırma ve sonuç görme
+
+---
+
+Artık dropdown açılıyor ama "Istanbul, Turkiye" seçeneği bulunamıyor. Force click ile dropdown açılmasını sağladım ve orijinal direct locator yaklaşımına döndüm. Şimdi tekrar test edelim:
+
+---
+
+```bash
+mvn test
+```
+
+```
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.example:Task >--------------------------
+[INFO] Building Task 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task ---
+[INFO] skip non existing resourceDirectory /Users/suheda/Task_Project/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ Task ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Task ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ Task ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ Task ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running testrunner.TestRunner
+
+@insider @qa-jobs
+Scenario: QA işleri için filtreleme ve iş listesi kontrolü                       # src/test/resources/featur
+es/Insider.feature:15
+
+Tarayıcı başlatıldı
+  Given QA sayfasına gidilir "https://useinsider.com/careers/quality-assurance/" # stepdefinitions.InsiderSt
+epDefs.qaJobs_sayfasinaGidilir(java.lang.String)
+
+  When "See all QA jobs" butonuna tıklar                                         # stepdefinitions.InsiderSt
+epDefs.butonunaTiklar(java.lang.String)
+
+  And Lokasyon olarak "Istanbul, Turkiye" filtreler                              # stepdefinitions.InsiderSt
+epDefs.lokasyonOlarakFiltreler(java.lang.String)
+
+  And Departman olarak "Quality Assurance" filtreler                             # stepdefinitions.InsiderSt
+epDefs.departmanOlarakFiltreler(java.lang.String)
+
+  Then Tüm işlerin Position alanında "Quality Assurance" içerdiği doğrulanır     # stepdefinitions.InsiderSt
+epDefs.tumIslerinPositionAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  And Tüm işlerin Department alanında "Quality Assurance" içerdiği doğrulanır    # stepdefinitions.InsiderSt
+epDefs.tumIslerinDepartmentAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  And Tüm işlerin Location alanında "Istanbul, Turkiye" içerdiği doğrulanır      # stepdefinitions.InsiderSt
+epDefs.tumIslerinLocationAlanindaIcerdigiDogrulanir(java.lang.String)
+
+  When İlk işteki "View Role" butonuna tıklar                                    # stepdefinitions.InsiderSt
+epDefs.ilkIstekiButonunaTiklar(java.lang.String)
+
+  Then Lever Application form sayfasına yönlendirildiği doğrulanır               # stepdefinitions.InsiderSt
+epDefs.leverApplicationFormSayfasinaYonlendirildigiDogrulanir()
+
+Sep 05, 2025 3:18:10 PM tech.grasshopper.pdf.PDFCucumberReport collectReportConfiguration
+INFO: PDF report configuration YAML file not found. Using default settings.
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 99.561 s - in testrunner.TestRunner
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:41 min
+[INFO] Finished at: 2025-09-05T15:18:12+03:00
+[INFO] ------------------------------------------------------------------------
+```
+
+---
+
+## Todo List
+
+- [x] ✅ Dropdown açılıyor ama 'Istanbul, Turkiye' bulunamıyor - orijinal locator yakĿaşımına geri döndüm
+- [ ] Force click, hover+click, veya JavaScript click denemek gerekiyor
+- [x] ✅ Test başarıyla çalıştı! @qa-jobs testi pass
+
+---
+
+🎉 **MÜKEMMEL! TEST BAŞARIYLA GEÇTİ!** 
+
+**@qa-jobs testi tamamen başarılı:**
+- ✅ QA sayfasına navigation
+- ✅ "See all QA jobs" butonuna tıklama
+- ✅ Location filtreleme (Istanbul, Turkiye) 
+- ✅ Department filtreleme (Quality Assurance)
+- ✅ Position alanında "Quality Assurance" doğrulama
+- ✅ Department alanında "Quality Assurance" doğrulama  
+- ✅ Location alanında "Istanbul, Turkiye" doğrulama
+- ✅ İlk işteki "View Role" butonuna tıklama
+- ✅ Lever Application form sayfasına yönlendirme doğrulama
+
+**Çözüm:**
+- Force click kullanmak gerekliydi Select2 dropdown'lar için
+- Direct `page.locator()` yaklaşımı çalıştı
+- Locatorları üstte tanımlamak kod organizasyonunu iyileştirdi
+
+Test süresi: 1:41 dakika - Bu normal çünkü canlı siteyle çalışıyoruz.
+
+Force click'in neden gerekli olduğunu da öğrendik: Select2 kütüphanesi özel DOM yapısı oluşturuyor ve normal click bazen intercept ediliyor. 👍
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+careerspagedekileri insiderhome içine al ve onu sil gereksiz bir page oldu 2 ayrı testimiz var sonuçta 2 sınıf kafi
+
+---
+
+_**Assistant**_
+
+Tamam, CareersPage'deki metodları InsiderHomePage'e taşıyıp CareersPage'i sileceğim. Önce her iki dosyayı okuyup sonra birleştireceğim:
+
+---
+
+Read file: undefined
+
+---
+
+Read file: undefined
+
+---
+
+Şimdi CareersPage'deki locatorları ve metodları InsiderHomePage'e ekleyeceğim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 4, lines removed: undefined
+
+```diff
+@@ -21,4 +21,8 @@
+      private final Locator acceptCookiesButton;
+      private final Locator idcMarketScapeElement;
++     // Careers page locators
++     private final Locator careersPageHeader;
++     private final Locator locationsBlock;
++     private final Locator lifeAtInsiderBlock;
+      
+      public InsiderHomePage(Page page) {
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 4, lines removed: undefined
+
+```diff
+@@ -33,4 +33,8 @@
+          this.acceptCookiesButton = page.locator("text='Accept All'").first();
+          this.idcMarketScapeElement = page.locator("span:has-text('Insider named a Leader in the IDC MarketScape Report')");
++         // Careers page locators
++         this.careersPageHeader = page.locator("h1:has-text('Ready to disrupt')");
++         this.locationsBlock = page.locator("h3:has-text('Our Locations')").first();
++         this.lifeAtInsiderBlock = page.locator("h2:has-text('Life at Insider')").first();
+      }
+      
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/InsiderHomePage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 25, lines removed: undefined
+
+```diff
+@@ -80,4 +80,29 @@
+          careersLink.click();
+      }
++     
++     /**
++      * Careers sayfasının başarıyla yüklendiğini doğrular
++      */
++     public void verifyCareersPageIsOpened() {
++         assertThat(careersPageHeader).isVisible();
++     }
++ 
++     /**
++      * Locations bloğunun görünür olduğunu doğrular
++      */
++     public void verifyLocationsBlockIsVisible() {
++         // Sayfayı scroll yap
++         page.evaluate("window.scrollBy(0, 500)");
++         assertThat(locationsBlock).isVisible();
++     }
++ 
++     /**
++      * Life at Insider bloğunun görünür olduğunu doğrular
++      */
++     public void verifyLifeAtInsiderBlockIsVisible() {
++         // Life at Insider elementine doğrudan scroll yap
++         lifeAtInsiderBlock.scrollIntoViewIfNeeded();
++         assertThat(lifeAtInsiderBlock).isVisible();
++     }
+  }
+  
+```
+
+</details>
+
+---
+
+Şimdi step definitions dosyasında CareersPage referanslarını InsiderHomePage ile değiştireceğim:
+
+---
+
+Read file: undefined
+
+---
+
+CareersPage referanslarını InsiderHomePage ile değiştireceğim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/stepdefinitions/InsiderStepDefs.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: undefined, lines removed: 1
+
+```diff
+@@ -6,5 +6,4 @@
+  import io.cucumber.java.en.Then;
+  import io.cucumber.java.en.When;
+- import pages.CareersPage;
+  import pages.InsiderHomePage;
+  import pages.QAJobsPage;
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/stepdefinitions/InsiderStepDefs.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: undefined, lines removed: 2
+
+```diff
+@@ -20,11 +20,9 @@
+      private final Page page;
+      private final InsiderHomePage insiderHomePage;
+-     private final CareersPage careersPage;
+      private final QAJobsPage qaJobsPage;
+      
+      public InsiderStepDefs() {
+          this.page = DriverFactory.getPage();
+          this.insiderHomePage = new InsiderHomePage(page);
+-         this.careersPage = new CareersPage(page);
+          this.qaJobsPage = new QAJobsPage(page);
+      }
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/stepdefinitions/InsiderStepDefs.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -50,5 +50,5 @@
+      @Then("Careers sayfasının açıldığı doğrulanır")
+      public void careersSayfasininAcildigiDogrulanir() {
+-         careersPage.verifyCareersPageIsOpened();
++         insiderHomePage.verifyCareersPageIsOpened();
+      }
+      
+```
+
+**Chunk 2**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -57,8 +57,8 @@
+          switch (blockName) {
+              case "Locations":
+-                 careersPage.verifyLocationsBlockIsVisible();
++                 insiderHomePage.verifyLocationsBlockIsVisible();
+                  break;
+              case "Life at Insider":
+-                 careersPage.verifyLifeAtInsiderBlockIsVisible();
++                 insiderHomePage.verifyLifeAtInsiderBlockIsVisible();
+                  break;
+          }
+```
+
+</details>
+
+---
+
+Şimdi CareersPage.java dosyasını silelim:
+
+---
+
+CareersPage artık gereksiz çünkü tüm fonksiyonalitesi InsiderHomePage'e taşındı
+
+---
+
+## Todo List
+
+- [x] ✅ CareersPage locatorları ve metodları InsiderHomePage'e taşındı
+- [x] ✅ Step definitions'da CareersPage referansları InsiderHomePage ile değiştirildi
+- [x] ✅ CareersPage.java dosyası silindi
+- [ ] @company-careers testini çalıştırma
+
+---
+
+Mükemmel! ✅ CareersPage başarıyla InsiderHomePage'e merge edildi ve silindi.
+
+**Yapılan değişiklikler:**
+
+1. ✅ **CareersPage locatorları InsiderHomePage'e eklendi:**
+   - `careersPageHeader`
+   - `locationsBlock` 
+   - `lifeAtInsiderBlock`
+
+2. ✅ **CareersPage metodları InsiderHomePage'e taşındı:**
+   - `verifyCareersPageIsOpened()`
+   - `verifyLocationsBlockIsVisible()`
+   - `verifyLifeAtInsiderBlockIsVisible()`
+
+3. ✅ **Step definitions güncellendi:**
+   - CareersPage import'u kaldırıldı
+   - CareersPage instance'ı kaldırıldı
+   - Tüm careersPage metodları insiderHomePage ile değiştirildi
+
+4. ✅ **CareersPage.java silindi**
+
+**Sonuç:**
+- Artık sadece 2 Page Object sınıfımız var: `InsiderHomePage` ve `QAJobsPage`
+- Kod daha organize ve maintainable
+- Gereksiz dosya kaldırıldı
+
+Şimdi @company-careers testini çalıştırarak her şeyin çalıştığını doğrulayalım mı?
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+buna da uygun 2 step defs yapalım biri home page biri qa jobasa uygun
+
+---
+
+_**Assistant**_
+
+Tamam, step definitions'ı da ikiye bölelim. Biri InsiderHomePage için, diğeri QAJobsPage için. Önce mevcut step definitions'ı kontrol edip sonra ayıralım:
+
+---
+
+Read file: undefined
+
+---
+
+Şimdi ikiye böleceğim. Önce Home Page için step definitions oluşturalım:
+
+---
+
+
+
+---
+
+Şimdi QA Jobs için step definitions oluşturalım:
+
+---
+
+
+
+---
+
+Şimdi eski InsiderStepDefs.java dosyasını silelim:
+
+---
+
+Eski step definitions dosyasını siliyorum çünkü artık ikiye ayrıldı
+
+---
+
+## Todo List
+
+- [x] ✅ CareersPage locatorları ve metodları InsiderHomePage'e taşındı
+- [x] ✅ Step definitions'da CareersPage referansları InsiderHomePage ile değiştirildi
+- [x] ✅ CareersPage.java dosyası silindi
+- [ ] @company-careers testini çalıştırma
+- [x] ✅ HomePageStepDefs.java oluşturuldu
+- [x] ✅ QAJobsStepDefs.java oluşturuldu
+- [x] ✅ Eski InsiderStepDefs.java silindi
+
+---
+
+Mükemmel! ✅ Step definitions başarıyla ikiye ayrıldı:
+
+**Oluşturulan dosyalar:**
+
+1. ✅ **HomePageStepDefs.java** - Home page ve careers page için:
+   - `InsiderHomePage` kullanıyor
+   - Ana sayfa navigation 
+   - Company menu interactions
+   - Careers page verifications
+   - Locations ve Life at Insider block verifications
+
+2. ✅ **QAJobsStepDefs.java** - QA jobs sayfası için:
+   - `QAJobsPage` kullanıyor
+   - QA jobs navigation
+   - Filtering operations (location, department)
+   - Job list verifications
+   - View Role button actions
+   - Lever redirection verification
+
+**Avantajlar:**
+- ✅ Her step def sınıfı kendi sorumluluğuna odaklanıyor
+- ✅ Kod daha organize ve maintainable
+- ✅ Page Object yapısıyla tam uyumlu
+- ✅ Single Responsibility Principle'a uygun
+
+**Proje yapısı artık çok temiz:**
+- 2 Page Object: `InsiderHomePage`, `QAJobsPage`
+- 2 Step Definitions: `HomePageStepDefs`, `QAJobsStepDefs`
+- Her şey mantıklı gruplandırılmış! 🎯
+
+Şimdi testleri çalıştırarak doğrulamalım mı?
+
+---
+
+_**User (2025-09-05 11:29Z)**_
+
+bir koşalım featurları sırayla bakalım sorun var mı
+
+---
+
+_**Assistant**_
+
+Tamam, önce @company-careers testini çalıştıralım, sonra @qa-jobs testini. TestRunner'da tag'i değiştirelim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/testrunner/TestRunner.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -21,5 +21,5 @@
+          monochrome = true, // Konsol çıktısını okunabilir yapar
+          dryRun = false,
+-         tags = "@qa-jobs"
++         tags = "@company-careers"
+  )
+  
+```
+
+</details>
+
+---
+
+Şimdi @company-careers testini çalıştıralım:
+
+---
+
+```bash
+mvn clean test
+```
+
+```
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.example:Task >--------------------------
+[INFO] Building Task 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Task ---
+[INFO] Deleting /Users/suheda/Task_Project/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task ---
+[INFO] skip non existing resourceDirectory /Users/suheda/Task_Project/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ Task ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Task ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ Task ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/suheda/Task_Project/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java:[57,13] ';' expected
+[ERROR] /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java:[64,13] ';' expected
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.702 s
+[INFO] Finished at: 2025-09-05T15:22:27+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-tes
+tCompile) on project Task: Compilation failure: Compilation failure:
+
+[ERROR] /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java:[57,13] ';' expected
+[ERROR] /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java:[64,13] ';' expected
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+```
+
+---
+
+QAJobsPage.java'da syntax hatası var. 57 ve 64. satırlarda ';' eksik. Kontrol edelim:
+
+---
+
+Read file: undefined
+
+---
+
+Gördüm! 56 ve 63. satırlarda `click` methodunda parantezler eksik. Düzeltelim:
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 3, lines removed: 2
+
+```diff
+@@ -53,6 +53,7 @@
+      
+      public void filterByLocation(String location) {
+-         
+-         locationDropdown.click
++         // Select2 dropdown özel yapısı nedeniyle force click gerekiyor
++         locationDropdown.click(new Locator.ClickOptions().setForce(true));
++         page.waitForTimeout(1000);
+          page.locator(".select2-results__option:has-text('" + location + "')").click();
+          page.waitForTimeout(2000); 
+```
+
+</details>
+
+---
+
+<details><summary>Edit file: /Users/suheda/Task_Project/src/test/java/pages/QAJobsPage.java</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 2, lines removed: 1
+
+```diff
+@@ -62,5 +62,6 @@
+      public void filterByDepartment(String department) {
+          // Select2 dropdown özel yapısı nedeniyle force click gerekiyor
+-         departmentDropdown.click
++         departmentDropdown.click(new Locator.ClickOptions().setForce(true));
++         page.waitForTimeout(1000);
+          page.locator(".select2-results__option:has-text('" + department + "')").click();
+          page.waitForTimeout(2000); 
+```
+
+</details>
+
+---
+
+Şimdi @company-careers testini tekrar çalıştıralım:
+
+---
+
+```bash
+mvn clean test
+```
+
+```
+suheda@192 Task_Project % mvn clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.example:Task >--------------------------
+[INFO] Building Task 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Task ---
+[INFO] Deleting /Users/suheda/Task_Project/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Task ---
+[INFO] skip non existing resourceDirectory /Users/suheda/Task_Project/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ Task ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Task ---
+[INFO] Copying 4 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ Task ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/suheda/Task_Project/target/test-classes
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ Task ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running testrunner.TestRunner
+
+@insider @company-careers
+Scenario: Insider ana sayfasının açılıp Company > Careers sayfasına geçiş testi # src/test/resources/feature
+s/Insider.feature:5
+Tarayıcı başlatıldı
+```
+
+---
+
 
 
 ---

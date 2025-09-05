@@ -5,66 +5,23 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.CareersPage;
-import pages.InsiderHomePage;
 import pages.QAJobsPage;
 import utils.factory.DriverFactory;
 
 /**
- * Insider Step Definitions sınıfı
+ * QA Jobs Step Definitions sınıfı
  * 
- * Bu sınıf Gherkin adımlarını Java metodlarına bağlar.
- * Tüm Playwright etkileşimleri Page Object sınıfları üzerinden yapılır.
+ * Bu sınıf QA jobs sayfası ile ilgili 
+ * Gherkin adımlarını Java metodlarına bağlar.
  */
-public class InsiderStepDefs {
+public class QAJobsStepDefs {
     
     private final Page page;
-    private final InsiderHomePage insiderHomePage;
-    private final CareersPage careersPage;
     private final QAJobsPage qaJobsPage;
     
-    public InsiderStepDefs() {
+    public QAJobsStepDefs() {
         this.page = DriverFactory.getPage();
-        this.insiderHomePage = new InsiderHomePage(page);
-        this.careersPage = new CareersPage(page);
         this.qaJobsPage = new QAJobsPage(page);
-    }
-    
-    @Given("Kullanıcı {string} adresine gider")
-    public void kullaniciAdresineGider(String url) {
-        insiderHomePage.navigateTo(url);
-    }
-    
-    @Then("Insider ana sayfasının açıldığı doğrulanır")
-    public void insiderAnaSayfasininAcildigiDogrulanir() {
-        insiderHomePage.verifyHomePageIsOpened();
-    }
-    
-    @When("Kullanıcı navigasyon barındaki {string} menüsünü seçer")
-    public void kullaniciNavigasyonBarindakiMenusunuSecer(String menuName) {
-        insiderHomePage.hoverCompanyMenu();
-    }
-    
-    @And("{string} seçeneğine tıklar")
-    public void secenegineTiklar(String optionName) {
-        insiderHomePage.clickCareers();
-    }
-    
-    @Then("Careers sayfasının açıldığı doğrulanır")
-    public void careersSayfasininAcildigiDogrulanir() {
-        careersPage.verifyCareersPageIsOpened();
-    }
-    
-    @And("{string} bloğunun görünür olduğu doğrulanır")
-    public void blogunununGorunurOlduguDogrulanir(String blockName) {
-        switch (blockName) {
-            case "Locations":
-                careersPage.verifyLocationsBlockIsVisible();
-                break;
-            case "Life at Insider":
-                careersPage.verifyLifeAtInsiderBlockIsVisible();
-                break;
-        }
     }
     
     @Given("QA sayfasına gidilir {string}")

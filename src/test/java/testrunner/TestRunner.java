@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         },
         monochrome = true, // Konsol çıktısını okunabilir yapar
         dryRun = false,
-        tags = "@company-careers"
+        tags = "@insider and @qa-jobs"
 )
 
 public class TestRunner {
